@@ -34,8 +34,8 @@ This file is part of the APM_PLANNER project
 DebugOutput::DebugOutput(QWidget *parent) : QWidget(parent)
 {
     ui.setupUi(this);
-    ui.hashLineEdit->setText(define2string(GIT_HASH));
-    ui.commitLineEdit->setText(define2string(GIT_COMMIT));
+    //ui.hashLineEdit->setText(define2string(GIT_HASH));
+    //ui.commitLineEdit->setText(define2string(GIT_COMMIT));
     connect(ui.onTopCheckBox,SIGNAL(clicked(bool)),this,SLOT(onTopCheckBoxChecked(bool)));
     connect(ui.copyPushButton,SIGNAL(clicked()),this,SLOT(copyToClipboardButtonClicked()));
     connect(this,SIGNAL(append(QString)),this,SLOT(appendText(QString)));

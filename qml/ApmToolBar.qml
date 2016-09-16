@@ -360,5 +360,21 @@ Rectangle {
             height: parent.height
             color: "black"
         }
+
+        ToggleSwitch {
+            label: "n/a"
+            onToggled: globalObj.toggleConnections()
+        }
+
+        /*Button {
+            label: "TOGGLE C"
+            enabled: true
+            onClicked: {
+                globalObj.toggleConnections()
+                setUnselected()
+            }
+        }*/
+
     }
+
 }

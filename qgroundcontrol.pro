@@ -961,6 +961,7 @@ OTHER_FILES += \
 #INSTALLS            += sources target
 
 DISTFILES += \
-    qml/components/BarGauge.qml
+    qml/components/BarGauge.qml \
+    qml/components/ToggleSwitch.qml
 
 

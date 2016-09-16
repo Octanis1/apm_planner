@@ -466,5 +466,30 @@ void APMToolBar::parameterChanged(int uas, int component, int parameterCount,
         rootObject()->setProperty("enableStatusDisplay",
                                   QVariant(arming_required));
     }
-
 }
+
+void APMToolBar::toggleConnections()
+{
+     static int i = 0;
+     QLOG_DEBUG() << "APMToolBar::toggleConnections " << i;
+
+     if(i % 2){
+       QLOG_DEBUG() << "APMToolBar::toggleConnections " << "adding 18";
+       getUdpLink()->addHost("192.168.2.18:14555");
+       getUdpLink()->removeHost("192.168.2.19:14555");
+
+     }else{
+       QLOG_DEBUG() << "APMToolBar::toggleConnections " << "adding 19";
+       getUdpLink()->addHost("192.168.2.19:14555");
+       getUdpLink()->removeHost("192.168.2.18:14555");
+
+     }
+     i++;
+}
+
+UDPLink* APMToolBar::getUdpLink() const
+{
+    return dynamic_cast<UDPLink*>(LinkManager::instance()->getLink(m_currentLinkId));
+}
+
+

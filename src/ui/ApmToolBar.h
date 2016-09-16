@@ -33,6 +33,7 @@ This file is part of the APM_PLANNER project
 
 #include "UASInterface.h"
 #include "Settings.h"
+#include "UDPLink.h"
 #include <QAction>
 #include <QQuickView>
 
@@ -88,6 +89,8 @@ public slots:
     void updateLinkDisplay(int linkid);
     void newLinkCreated(int linkid);
 
+    void toggleConnections();
+
     void navModeChanged(int uasid, int mode, const QString& text);
     void heartbeat(UASInterface* uas);
     void stopHeartbeat();
@@ -109,6 +112,7 @@ private:
     bool m_disableOverride;
     int m_currentLinkId;
     bool m_donated;
+    UDPLink* getUdpLink() const;
 };
 
 #endif // APMTOOLBAR_H
