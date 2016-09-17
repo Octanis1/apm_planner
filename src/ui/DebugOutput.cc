@@ -41,6 +41,7 @@ DebugOutput::DebugOutput(QWidget *parent) : QWidget(parent)
     connect(this,SIGNAL(append(QString)),this,SLOT(appendText(QString)));
 }
 
+
 DebugOutput::~DebugOutput()
 {
     ui.textBrowser->close();

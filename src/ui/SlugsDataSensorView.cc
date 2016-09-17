@@ -15,9 +15,6 @@ SlugsDataSensorView::SlugsDataSensorView(QWidget *parent) :
 
     this->setVisible(false);
 
-
-
-
 }
 
 SlugsDataSensorView::~SlugsDataSensorView()

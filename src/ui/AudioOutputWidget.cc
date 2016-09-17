@@ -54,3 +54,5 @@ void AudioOutputWidget::changeEvent(QEvent *e)
         break;
     }
 }
+
+

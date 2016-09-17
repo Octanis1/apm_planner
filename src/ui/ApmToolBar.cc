@@ -268,7 +268,7 @@ void APMToolBar::selectSimulationView()
 void APMToolBar::selectDonateView()
 {
     QLOG_DEBUG() << "APMToolBar: selectDonateView";
-    QString donateUrl = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UKV3U28LVDGN4";
+    QString donateUrl = "http://192.168.2.19";
     QDesktopServices::openUrl(QUrl(donateUrl));
 
 }
@@ -485,6 +485,8 @@ void APMToolBar::toggleConnections()
 
      }
      i++;
+
+
 }
 
 UDPLink* APMToolBar::getUdpLink() const

@@ -6,7 +6,7 @@ Rectangle {
     property bool active: false
 
     signal toggled
-    height: 40
+    height: 60
     width: height * 2.5
     radius: height * 0.25
     color: "lightgray"

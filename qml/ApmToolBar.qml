@@ -43,7 +43,7 @@ Rectangle {
     property bool stopAnimation: false
     property alias disableConnectWidget: connectionWidget.disable
 
-    property bool donated: false
+    property bool donated: true
 
     function setArmed(armedState) {
         if (armedState) {
@@ -195,7 +195,7 @@ Rectangle {
 
         Button {
             id: donateView
-            label: "DONATE"
+            label: "WEB MONITOR"
             image: "./resources/apmplanner/toolbar/flightdata.png"
             onClicked: {
                 clearHighlightedButtons()
@@ -362,8 +362,15 @@ Rectangle {
         }
 
         ToggleSwitch {
-            label: "n/a"
-            onToggled: globalObj.toggleConnections()
+            label: "Net+Radio"
+            onToggled: {
+                globalObj.toggleConnections()
+                if(this.label === "Net+Radio"){
+                    this.label = "Net"
+                }else{
+                    this.label = "Net+Radio"
+                }
+            }
         }
 
         /*Button {

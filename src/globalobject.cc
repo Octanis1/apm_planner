@@ -26,6 +26,8 @@ GlobalObject::~GlobalObject()
 {
 }
 
+
+
 void GlobalObject::loadSettings()
 {
     QSettings settings;

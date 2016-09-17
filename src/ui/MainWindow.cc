@@ -2063,6 +2063,7 @@ void MainWindow::UASCreated(UASInterface* uas)
         break;
     }
 
+
     // XXX The multi-UAS selection menu has been disabled for now,
     // its redundant with right-clicking the UAS in the list.
     // this code piece might be removed later if this is the final
